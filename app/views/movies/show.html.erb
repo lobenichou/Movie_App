@@ -1,0 +1,41 @@
+<div id="sidebar">	
+	<script type="text/javascript" language="javascript" src="movies.js"></script>
+		<h1>Movie Library</h1>
+		<h2>Anything and everything you want to know about movie </h2>
+</div>
+<div id="main">
+	<div class="poster">
+		<img src="<%= @movie["Poster"] != "N/A" ? @movie["Poster"] : "http://pageantrocks.com/wp-content/themes/constructor/images/noimage.png"  %>"/>
+	</div>
+			<h3>Title: <%= @movie["Title"] %></h3>
+
+			<h3>Director: <%= @movie["Director"] %></h3>
+
+			<h3 id="info">More Info: </h3>
+
+		<div id="dropdown">
+			<h3>Year: <%= @movie["Year"] %></h3>
+			<h3>Rated: <%= @movie["Rated"] %></h3>
+			<h3>Runtime: <%= @movie["Type"] %></h3>
+			<h3>Release: <%= @movie["Released"] %></h3>
+			<h3>Genre: <%= @movie["Genre"] %></h3>
+			<h3>Type: <%= @movie["Type"] %></h3>
+			<p>Plot: <%= @movie["Plot"] %></p>
+		</div>
+
+
+			<span id="rateStatus">Rate Me...</span>
+				<span id="ratingSaved">Rating Saved!</span>
+		<div id="rateMe" title="Rate Me...">
+    	<a onclick="rateIt(this)" id="_1" title="ehh..." onmouseover="rating(this)" onmouseout="off(this)"></a>
+    	<a onclick="rateIt(this)" id="_2" title="Not Bad" onmouseover="rating(this)" onmouseout="off(this)"></a>
+    	<a onclick="rateIt(this)" id="_3" title="Pretty Good" onmouseover="rating(this)" onmouseout="off(this)"></a>
+    	<a onclick="rateIt(this)" id="_4" title="Seriously Awesome!" onmouseover="rating(this)" onmouseout="off(this)"></a>
+    	<a onclick="rateIt(this)" id="_5" title="A Master Piece" onmouseover="rating(this)" onmouseout="off(this)"></a>
+			</div>
+
+		<a href="/" class="home"><h5>Home</h5></a>
+</div>
+
+
+

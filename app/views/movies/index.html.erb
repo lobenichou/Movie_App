@@ -1,0 +1,11 @@
+<div id="sidebar">	
+	<h1>Movie Library</h1>
+	<h2>Anything and everything you want to know about movies</h2>
+</div>
+<div id="main">
+	<h2>Search Results:</h2><br/>
+	<% @search.each do |title|  %>
+	<a href = "/movies/<%= title["imdbID"] %>"><%= title["Title"] %></a></br>
+	<% end %>
+<a href="/" class="home"><h5>Home</h5></a>
+	</div>
